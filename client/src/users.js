@@ -8,6 +8,7 @@ import { useSearchParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import './style.css'
 import './bootstrap.css'
+import CreateTask from './CreateTask';
 let count=1;
 const Callapi1=(props)=>{
     const [task,setTask]=useState("")
@@ -60,7 +61,7 @@ class Users extends React.Component{
      return <> 
 
      <div class='container-fluid bg-primary text-white' >
-    <h1 class='head'>YOUR TODOLIST</h1>
+    <h1 class='head'>YOUR TODOLIST..................</h1>
     <div style={{display:"inline-block",marginLeft:"80%"}}>
      <a href='http://localhost:3000' class='btn btn-danger'>Logout</a> </div>
      
@@ -84,6 +85,9 @@ class Users extends React.Component{
         <h1>{<Getusername/>}</h1>
     </form>
     </div>
+
+      <CreateTask/>
+
       </>
     
     };
