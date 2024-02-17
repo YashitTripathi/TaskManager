@@ -1,5 +1,6 @@
 // Import required modules
 import express from 'express';
+import cors from 'cors'; // Import cors package
 import mysql from 'mysql2';
 // Create connection pool
 const pool = mysql.createPool({
@@ -13,7 +14,7 @@ const pool = mysql.createPool({
 // Create Express app
 const app = express();
 app.use(express.json());
-
+app.use(cors()); // Enable CORS for all origins
 // Create a task
 app.post('/tasks', (req, res) => {
     const { task_name, task_description, due_date, priority } = req.body;

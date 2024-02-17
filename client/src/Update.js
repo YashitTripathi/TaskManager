@@ -29,6 +29,7 @@ const CreateTask = ({ addTask }) => {
 
   return (
     <div>
+      <h2>Create New Task</h2>
       <form onSubmit={handleSubmit}>
         <input type="text" name="task_name" value={taskData.task_name} onChange={handleChange} placeholder="Task Name" required />
         <textarea name="task_description" value={taskData.task_description} onChange={handleChange} placeholder="Task Description" required />

@@ -3,6 +3,7 @@ import './bootstrap.css';
 import './style.css'
 import { Outlet,Link } from 'react-router-dom';
 import React from 'react';
+ 
 
 
 
@@ -23,6 +24,8 @@ class Loginform extends React.Component{
    render(){ return(
         <><div >
 <div class="container-fluid pt-4 bg-primary text-white" style={{marginBottom:-7}}>
+
+
         <center>
         <h1  >WELCOME TO TASK MANAGEMENT TOOL</h1><br/>
         
@@ -34,7 +37,7 @@ class Loginform extends React.Component{
         
         <div class="container-fluid pt-3 bg-info text-white" style={{paddingBottom:100}} ><center>
             <img src={require("./images/index.jpg") }/>
-            <form action="http://localhost:9000/login" method="POST" autocomplete="off" style={{display:"inline-block",marginTop:-200}}class="form-group">
+            <form action="http://localhost:3001/users?username=Yashit" method="GET" autocomplete="off" style={{display:"inline-block",marginTop:-200}}class="form-group">
 Username<br/> <input class="form-control-lg"  onInput={(e)=>{this.state.username=(e.target.value)}} type="text" name="username" /><br/><br/>
 Password<br/> <input class="form-control-lg"  onInput={(e)=>{this.state.password=(e.target.value)}} type="password" name="password"/><br/><br/>
 <button class="btn btn-primary" type="submit">Login</button>
